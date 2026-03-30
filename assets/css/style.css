@@ -1,0 +1,43 @@
+/*
+    =============================================================================================================================
+    PROJECT:        Portfolio Development Project
+    AUTHOR:         Lulzim Morina
+    LAST UPDATED:   29.03.2026
+    DESCRIPTION:    This CSS file is the main stylesheet for the portfolio website. It contains all the styles that define
+                    the look and feel of the website. The styles in this file are applied to the HTML elements in the index.html
+                    file to create a visually appealing and user-friendly website.
+    =============================================================================================================================
+*/
+
+/* 1. CSS Reset & Base Styles */
+
+/* The universal selector (*) is used to apply styles to all elements on the page. */
+* {
+    /* The margin and padding are set to 0 to remove any default spacing provided by the browser.
+    This ensures that all elements start with a consistent baseline for spacing. */
+    margin: 0;
+    padding: 0;
+    /* The box-sizing property controls how the total width and height of an element are calculated. By setting it
+    to border-box, the padding and border are included in the total width and height, which makes it easier to manage layouts. */
+    box-sizing: border-box;
+}
+
+/* The html element manipulates the root of the document. */
+html {
+    /* The scroll-behavior property is set to smooth to enable smooth scrolling when navigating to different sections of the page. */
+    scroll-behavior: smooth;
+}
+
+/* The body element in CSS changes the overall appearance of the page. */
+body {
+    /* The font-family property specifies the font for the text on the page. In this case, a stack of fonts is provided,
+    from left to right. The browser will use the first available font in the list. */
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* The line-height property controls the spacing between lines of text. The value is multiplied by the font size to determine
+    the actual line height. 1 means equal to the font size, or 100% of the font size. */
+    line-height: 1.6;
+    /* The color property sets the color of the text on the page. */
+    color: #333;
+    /* The background-color property sets the background color of the page. */
+    background-color: #f4f4f4;
+}
