@@ -41,3 +41,29 @@ body {
     /* The background-color property sets the background color of the page. */
     background-color: #f4f4f4;
 }
+
+/* 2. LAYOUT STRUCTURE & STYLES */
+/* Here we will define the styles for the main layout of the page, including the header, main content area, and footer. */
+
+/* The header element typically contains the navigation and the main heading of the page. */
+header {
+
+}
+
+/* The main element is used to define the main content area of the page. */
+main {
+
+}
+
+/* The footer element typically contains copyright information and other footer content. */
+footer {
+
+}
+
+/* 3. SPECIFIC ELEMENT STYLES */
+/* Here we will define styles for specific elements such as headings, paragraphs, and sections to name a few. */
+
+h1, h2, h3 {
+    /* The color property sets the color of the headings. */
+    color: #222;
+}
