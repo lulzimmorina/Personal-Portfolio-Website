@@ -13,25 +13,14 @@ My vision is to develop such profound skills in Computer Science that I can unde
 * [Vision](#project-description)
 * [Technologies Used](#technologies-used)
 * [Current Status & Roadmap](#current-status--roadmap)
-* [Learning Log](#learning-log) (Coming Soon)
 
 ---
 
 ## Current Status & Roadmap
-Here I`m going to add in detail where I am with my project and what specific tasks I need to tackle.
-
-- [x] Basic structure for my HTML file (index.html)
-- [x] Basic structure for my CSS file (style.css)
-- [x] Establishing folder structure (assets/css,img,js,..)
-
-- [/] Adding nav section to my HTML file (index.html) / with Flexbox styling
-
-- [ ] Creating visual dashboard (cards, buttons)
-- [ ] Implementing "Learning Log" details structure
+View my detailed roadmap and upcoming tasks on my **[Portfolio Development Board](#https://github.com/users/lulzimmorina/projects/1/views/2)**. With that board I'm trying to navigate the complexity of creating the first milestone on my journey.
 
 ---
 
 ## Technologies Used
-* **Current:** HTML5, CSS3, Git
-* **In Progress:** SQL, JavaScript
-* **Future Vision:** Computer Science Fundamentals, System Architecture, Problem Solving strategies.
+* **Current & In Progress:** HTML5, CSS3, Git
+* **Future Vision:** JavaScript, SQL, Python, Computer Science Fundamentals, System Architecture, Problem Solving strategies.
