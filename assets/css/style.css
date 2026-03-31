@@ -56,6 +56,14 @@ body {
 
 /* The header element typically contains the navigation and the main heading of the page. */
 header {
+    max-height: 80px;
+    /* The position property is set to fixed to keep the header at the top of the page even when scrolling. */
+    position: fixed;
+    /* The top and left properties are set to 0 to position the header at the top-left corner of the page. */
+    top: 0;
+    left: 0;
+    /* The width property is set to 100% to make the header span the entire width of the page. */
+    width: 100%;
     background: hsl(174, 59%, 61%);
 }
 
@@ -82,7 +90,7 @@ footer {
     /* The align-items property is set to center to vertically center the content within the landing page. */
     align-items: center;
     justify-content: space-between;
-    min-height: 80vh;
+    min-height: calc(100vh - 80px);
     padding: 50px 0;
     background: #d66161;
 }
