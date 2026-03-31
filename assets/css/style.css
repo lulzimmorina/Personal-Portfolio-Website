@@ -56,17 +56,17 @@ body {
 
 /* The header element typically contains the navigation and the main heading of the page. */
 header {
-
+    background: hsl(174, 59%, 61%);
 }
 
 /* The main element is used to define the main content area of the page. */
 main {
-
+    background: hsl(223, 43%, 40%);
 }
 
 /* The footer element typically contains copyright information and other footer content. */
 footer {
-
+    background: hsl(174, 59%, 61%);
 }
 
 /*
@@ -84,11 +84,13 @@ footer {
     justify-content: space-between;
     min-height: 80vh;
     padding: 50px 0;
+    background: #d66161;
 }
 
 /* */
 .landing-page-content {
-    flex: 1;
+    flex: 2;
+    background: #d6d061;
 }
 
 /* The .landing-page-image class is used to style only the image on the landing page. */
@@ -96,6 +98,7 @@ footer {
     flex: 1;
     display: flex;
     justify-content: center;
+    background: #a1d661;
 }
 
 /* The img selector targets the image element within the .landing-page-image class. */
