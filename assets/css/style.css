@@ -57,7 +57,9 @@
     =============================================================================================================================
     2. LAYOUT STRUCTURE & STYLES
     =============================================================================================================================
-     Here we will define the styles for the main layout of the page, including the header, main content area, and footer.
+     In this section, we will define the layout structure and styles for the main sections of the website, including the header,
+     main content area, and footer. We will use CSS properties to control the positioning, spacing, and overall appearance of
+     these sections to create a cohesive and visually appealing layout.
     =============================================================================================================================
 */
 
@@ -93,7 +95,9 @@
     =============================================================================================================================
     3. SPECIFIC ELEMENT STYLES
     =============================================================================================================================
-     Here we will define styles for specific elements such as headings, paragraphs, and sections to name a few.
+     In this section, we will define styles for specific elements and components within the website, such as the landing page,
+     about me section, vision statement, and path to proficiency. These styles will include properties for layout, typography,
+     colors, and other visual aspects to enhance the overall design and user experience of the website.
     =============================================================================================================================
 */
 
