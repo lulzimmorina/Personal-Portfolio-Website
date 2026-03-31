@@ -1,5 +1,4 @@
 <!-- This is the main HTML file for the portfolio development project. It contains the structure of the webpage, including the header, main content, and footer. -->
-
 <!DOCTYPE html>
 <!-- The html tag with the lang attribute specifies the language of the page -->
 <html lang="en">
@@ -19,24 +18,52 @@
     <header>
         <!-- The nav element contains the navigation links -->
         <nav>
-
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#my-vision">My Vision</a></li>
+                <li><a href="#path-to-proficiency">Path to Proficiency</a></li>
+            </ul>
         </nav>
-        <h1>Hi there! I’m Lulzim Morina.</h1>
-        <p>Welcome to my portfolio. I’m learning web development and building this site to show my work.</p>
     </header>
     <!-- This is the main content area. In here you will find the main content of the page. -->
     <main>
-        <!-- Within the main content area, we have different sections for various information -->
-        <!-- id is used to uniquely identify each section. In this case, "about" and "skills" are the IDs -->
-        <section id="about">
-            <!-- The h2 tag is used for the first-level heading -->
-            <h2>About this page</h2>
-            <!-- The p tag is used for paragraph text-->
-            <p>This is the first section of the website. It explains who I am and what I’m learning.</p>
+        <!-- 'id' is used to uniquely identify each section. -->
+        <section id="home" class="landing-page">
+            <div class="landing-page-content">
+                <!-- The heading of my landing page -->
+                <h1>"Hi, I'm Lulzim Morina and this is why.."</h1>
+                <!-- The short description of my vision for the landing page -->
+                <p>
+                    "..I do not want to just find a Job, I want to walk the path of proficiency within
+                    the field of Computer Science."
+                </p>
+                <div class="landing-page-actions">
+                    <a href="#my-vision" class="btn-primary">Learn More</a>
+                    <a href="#about-me" class="btn-secondary">Read About Me</a>
+                </div>
+            </div>
+            <div class="landing-page-image">
+                <img src="assets/img/lulzim_morina.jpeg" alt="This is me, Lulzim Morina.">
+            </div>
         </section>
-        <section id="skills">
-            <h2>Skills</h2>
-            <p>Here I will list the programming languages and tools I’m learning.</p>
+        <section id="about-me">
+            <!-- The h2 tag is used for the first-level heading -->
+            <h2>Who is Lulzim Morina?</h2>
+            <!-- The p tag is used for paragraph text-->
+            <p>In the 'About Me' section I want to introduce myself and share my past, present and future goals.</p>
+        </section>
+        <section id="my-vision">
+            <h2>My Vision</h2>
+            <p>Here I will share my vision for the future and the goals I want to achieve.</p>
+        </section>
+        <section id="path-to-proficiency">
+            <h2>Path to Proficiency</h2>
+            <p>
+                In this section, I will outline the steps I am taking to become proficient in all the 
+                skills I need to achieve my vision and goals. This will include the resources I am using,
+                the projects I am working on, and the milestones I am aiming for.
+            </p>
         </section>
     </main>
     <!-- The footer section contains copyright information and other footer content -->
