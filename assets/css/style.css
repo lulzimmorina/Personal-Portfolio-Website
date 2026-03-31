@@ -87,7 +87,15 @@ footer {
 /* Here we will define styles for specific elements such as headings, paragraphs, and sections to name a few. */
 
 .landing-page {
-    display: flex;
+    /* The display grid property is used to create a grid layout for the landing page. */
+    display: grid;
+    /* The grid-template-columns property defines the number of columns in the grid and their widths. In this case, we
+    are creating a 12-column grid where each column takes up an equal fraction of the available space (1fr).
+        - repeat is a shorthand function that allows us to repeat a pattern of columns.
+        - 12 is the number of times the pattern should be repeated.
+        - 1fr means that each column will take up an equal fraction of the available space.
+    */
+    grid-template-columns: repeat(12, 1fr);
     /* The align-items property is set to center to vertically center the content within the landing page. */
     align-items: center;
     justify-content: space-between;
@@ -98,13 +106,13 @@ footer {
 
 /* */
 .landing-page-content {
-    flex: 2;
+    grid-column: 2 / 8;
     background: #d6d061;
 }
 
 /* The .landing-page-image class is used to style only the image on the landing page. */
 .landing-page-image {
-    flex: 1;
+    grid-column: 9 / 11;
     display: flex;
     justify-content: center;
     background: #a1d661;
