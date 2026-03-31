@@ -56,7 +56,7 @@ body {
 
 /* The header element typically contains the navigation and the main heading of the page. */
 header {
-    max-height: 80px;
+    height: 80px;
     /* The position property is set to fixed to keep the header at the top of the page even when scrolling. */
     position: fixed;
     /* The top and left properties are set to 0 to position the header at the top-left corner of the page. */
@@ -64,7 +64,7 @@ header {
     left: 0;
     /* The width property is set to 100% to make the header span the entire width of the page. */
     width: 100%;
-    background: hsl(174, 59%, 61%);
+    background: hsl(0, 38%, 69%);
 }
 
 /* The main element is used to define the main content area of the page. */
@@ -74,6 +74,7 @@ main {
 
 /* The footer element typically contains copyright information and other footer content. */
 footer {
+    height: 80px;
     background: hsl(174, 59%, 61%);
 }
 
@@ -90,7 +91,7 @@ footer {
     /* The align-items property is set to center to vertically center the content within the landing page. */
     align-items: center;
     justify-content: space-between;
-    min-height: calc(100vh - 80px);
+    min-height: 100vh;
     padding: 50px 0;
     background: #d66161;
 }
@@ -111,13 +112,28 @@ footer {
 
 /* The img selector targets the image element within the .landing-page-image class. */
 .landing-page-image img {
-    width: 300px;
+    max-width: 300px;
     height: 300px;
     object-fit: cover;
     object-position: center;
     border-radius: 50%;
     border: 5px solid #333;
     box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.about-me-page {
+    min-height: 100vh;
+    background: #61d6d6;
+}
+
+.my-vision-page {
+    min-height: 100vh;
+    background: #d661d6;
+}
+
+.path-to-proficiency-page {
+    min-height: 100vh;
+    background: #d66161;
 }
 
 /* The h1, h2, and h3 selectors target the first three levels of headings in the HTML document. */
