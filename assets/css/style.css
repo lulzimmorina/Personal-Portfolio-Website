@@ -2,14 +2,18 @@
     =============================================================================================================================
     PROJECT:        Portfolio Development Project
     AUTHOR:         Lulzim Morina
-    LAST UPDATED:   30.03.2026
+    LAST UPDATED:   31.03.2026
     DESCRIPTION:    This CSS file is the main stylesheet for the portfolio website. It contains all the styles that define
                     the look and feel of the website. The styles in this file are applied to the HTML elements in the index.html
                     file to create a visually appealing and user-friendly website.
     =============================================================================================================================
 */
 
-/* 1. CSS Reset & Base Styles */
+/*
+    =============================================================================================================================
+    1. CSS Reset & Base Styles
+    =============================================================================================================================
+*/
 
 /* The universal selector (*) is used to apply styles to all elements on the page. */
 * {
@@ -42,7 +46,12 @@ body {
     background-color: #f4f4f4;
 }
 
-/* 2. LAYOUT STRUCTURE & STYLES */
+/*
+    =============================================================================================================================
+    2. LAYOUT STRUCTURE & STYLES
+    =============================================================================================================================
+*/
+
 /* Here we will define the styles for the main layout of the page, including the header, main content area, and footer. */
 
 /* The header element typically contains the navigation and the main heading of the page. */
@@ -60,9 +69,47 @@ footer {
 
 }
 
-/* 3. SPECIFIC ELEMENT STYLES */
+/*
+    =============================================================================================================================
+    3. SPECIFIC ELEMENT STYLES
+    =============================================================================================================================
+*/
+
 /* Here we will define styles for specific elements such as headings, paragraphs, and sections to name a few. */
 
+.landing-page {
+    display: flex;
+    /* The align-items property is set to center to vertically center the content within the landing page. */
+    align-items: center;
+    justify-content: space-between;
+    min-height: 80vh;
+    padding: 50px 0;
+}
+
+/* */
+.landing-page-content {
+    flex: 1;
+}
+
+/* The .landing-page-image class is used to style only the image on the landing page. */
+.landing-page-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* The img selector targets the image element within the .landing-page-image class. */
+.landing-page-image img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    border: 5px solid #333;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* The h1, h2, and h3 selectors target the first three levels of headings in the HTML document. */
 h1, h2, h3 {
     /* The color property sets the color of the headings. */
     color: #222;
