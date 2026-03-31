@@ -160,12 +160,39 @@
 
     /* The img selector targets the image element within the .landing-page-image class. */
     .landing-page-image img {
-        max-width: 300px;
-        height: 300px;
+        /* The width property is set to 100% to make the image take up the full width of its container. */
+        width: 100%;
+        /*
+            The aspect-ratio property is set to 1 / 1 to maintain a square aspect ratio for the image. This ensures that the
+            image will always be displayed as a square, regardless of its original dimensions.
+        */
+        aspect-ratio: 1 / 1;
+        /*
+            The object-fit property is used to specify how the content of a replaced element, such as an image, should be resized
+            to fit its container.
+            The value cover means that the image will be scaled to cover the entire container, while maintaining its aspect ratio.
+            This may result in some parts of the image being cropped if the aspect ratio of the image does not match the 
+            aspect ratio of the container.
+        */
         object-fit: cover;
+        /*
+            The object-position property selects which part of the image to show when the image is cropped.
+            The value center means that the center of the image will be shown.
+        */
         object-position: center;
+        /* Turns the image into a circle by setting the border-radius to 50%. */
         border-radius: 50%;
+        /*
+            The border property adds a border around the image.
+            The value 5px solid #333 means that the border will be 5 pixels wide,
+            solid in style, and have a color of #333 (a dark gray).
+        */
         border: 5px solid #333;
+        /*
+            The box-shadow property adds a shadow effect around the image.
+            The value 0 10px 20px rgba(0,0,0,0.15) means that the shadow will be positioned 0 pixels horizontally,
+            10 pixels vertically, have a blur radius of 20 pixels, and a color of rgba(0,0,0,0.15) (a semi-transparent black).
+        */
         box-shadow: 0 10px 20px rgba(0,0,0,0.15);
     }
 
