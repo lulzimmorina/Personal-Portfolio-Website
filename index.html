@@ -16,15 +16,21 @@
 <body>
     <!-- This is the header section. It contains the navigation and the main heading of the page -->
     <header>
-        <!-- The nav element contains the navigation links -->
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about-me">About Me</a></li>
-                <li><a href="#my-vision">My Vision</a></li>
-                <li><a href="#path-to-proficiency">Path to Proficiency</a></li>
-            </ul>
-        </nav>
+        <div class="header-container">
+            <div class="header-logo-container">Mein Logo</div>
+            <!-- The nav element contains the navigation links -->
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home" class="btn-design btn-home">Home</a></li>
+                    <li><a href="#about-me" class="btn-design btn-about-me">About Me</a></li>
+                    <li><a href="#my-vision" class="btn-design btn-vision">My Vision</a></li>
+                    
+                    <li><a href="#path-to-proficiency" class="btn-design btn-main">Path to Proficiency</a></li>
+                    
+                    <li><button class="btn-design btn-inverted">Contact Me</button></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <!-- This is the main content area. In here you will find the main content of the page. -->
     <main>
@@ -32,19 +38,21 @@
         <section id="home" class="landing-page">
             <div class="landing-page-content">
                 <!-- The heading of my landing page -->
-                <h1>"Hi, I'm Lulzim Morina and this is why.."</h1>
+                <h1 class="h1-home">"Hi, I'm Lulzim Morina and this is why.."</h1>
                 <!-- The short description of my vision for the landing page -->
                 <p>
                     "..I do not want to just find a Job, I want to walk the path of proficiency within
                     the field of Computer Science."
                 </p>
                 <div class="landing-page-actions">
-                    <button class="btn-primary">Read More</button>
+                    <button class="">Read More</button>
                 </div>
             </div>
             <div class="landing-page-image">
-                <img src="assets/img/lulzim_morina.jpeg" alt="This is me, Lulzim Morina.">
-                <button class="btn-secondary">Who Am I?</button>
+                <div class="image-container"> <!-- Der Anker -->
+                    <img src="assets/img/lulzim_morina.jpeg" alt="This is me, Lulzim Morina.">
+                    <button class="about-me-circle-button-landing-page">Who am I?</button>
+                </div>
             </div>
         </section>
         <section id="about-me" class="about-me-page">
