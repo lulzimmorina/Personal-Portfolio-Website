@@ -2,7 +2,7 @@
     =============================================================================================================================
     PROJECT:        Portfolio Development Project
     AUTHOR:         Lulzim Morina
-    LAST UPDATED:   31.03.2026
+    LAST UPDATED:   01.04.2026
     DESCRIPTION:    This CSS file is the main stylesheet for the portfolio website. It contains all the styles that define
                     the look and feel of the website. The styles in this file are applied to the HTML elements in the index.html
                     file to create a visually appealing and user-friendly website.
@@ -43,14 +43,14 @@
     body {
         /* The font-family property specifies the font for the text on the page. In this case, a stack of fonts is provided,
         from left to right. The browser will use the first available font in the list. */
-        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-family: Arial, Helvetica, sans-serif;
         /* The line-height property controls the spacing between lines of text. The value is multiplied by the font size to determine
         the actual line height. 1 means equal to the font size, or 100% of the font size. */
         line-height: 1.6;
         /* The color property sets the color of the text on the page. */
         color: #333;
         /* The background-color property sets the background color of the page. */
-        background-color: #f4f4f4;
+        /* background-color: #f4f4f4; */
     }
 
 /*
@@ -65,22 +65,31 @@
 
     /* The header element typically contains the navigation and the main heading of the page. */
     header {
-        height: 80px;
+        height: 60px;
+        /* The width property is set to 100% to make the header span the entire width of the page. */
+        width: 100%;
         /* The position property is set to fixed to keep the header at the top of the page even when scrolling. */
         position: fixed;
         /* The top and left properties are set to 0 to position the header at the top-left corner of the page. */
         top: 0;
-        left: 0;
-        /* The width property is set to 100% to make the header span the entire width of the page. */
-        width: 100%;
-        background: hsl(0, 38%, 69%);
+        /* left: 0; */
+        /* The z-index property is set to 1000 to ensure that the header stays above other content on the page. */
+        z-index: 1000;
+        /* TEMPORARY: background color to visualize the grid area of the container. */
+        background: hsl(0, 0%, 100%);
+        /* slight shadow to create a separation between the header and the main content. */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+        display: flex;
+        align-items: center;
     }
 
     /* ------------------------------------------------------------------------------------------------------------------------- */
 
     /* The main element is used to define the main content area of the page. */
     main {
-        background: hsl(223, 43%, 40%);
+        /* TEMPORARY: background color to visualize the grid area of the container. */
+        /* background: hsl(223, 43%, 40%); */
     }
 
     /* ------------------------------------------------------------------------------------------------------------------------- */
@@ -88,7 +97,8 @@
     /* The footer element typically contains copyright information and other footer content. */
     footer {
         height: 80px;
-        background: hsl(174, 59%, 61%);
+        /* TEMPORARY: background color to visualize the grid area of the container. */
+        /* background: hsl(174, 59%, 61%); */
     }
 
 /*
@@ -100,6 +110,118 @@
      colors, and other visual aspects to enhance the overall design and user experience of the website.
     =============================================================================================================================
 */
+
+    /* -- */
+
+    .header-container {
+        width: 90%; /* Nicht ganz am Rand kleben */
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between; /* Links: Logo, Rechts: Nav */
+        align-items: center;
+    }
+
+    /* ------------------------------------------------------------------------------------------------------------------------- */
+
+    /* -- */
+    .nav-links {
+        list-style: none; /* Entfernt die Punkte/Bullets */
+        display: flex;
+        align-items: center;
+        gap: 30px; /* Abstand zwischen den Links/Buttons */
+    }
+
+    /* ------------------------------------------------------------------------------------------------------------------------- */
+
+    /* -- */
+    .nav-item {
+        display: inline-block; /* DAS ist der Schlüssel! */
+        text-decoration: none; /* Unterstrich weg */
+        color: #333;
+        font-weight: 500;
+        transition: color 0.3s; /* Weicher Übergang bei Hover */
+        padding: 10px 20px;    /* Jetzt funktionieren die Abstände richtig */
+    }
+
+    /* ------------------------------------------------------------------------------------------------------------------------- */
+
+    /* -- */
+    .nav-item:hover {
+        color: #333;
+    }
+
+    /* ------------------------------------------------------------------------------------------------------------------------- */
+
+    /* This is the core design for all buttons */
+    .btn-design {
+        display: inline-block;
+        padding: 10px 20px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: normal;
+        font-family: inherit; /* Inherits the font family from body */
+        cursor: pointer; /* Shows a pointer cursor on hover to indicate it's clickable */
+        border: 1px solid transparent; /* Border is transparent by default, but will be visible in the other designs */
+        transition: all 0.3s ease; /* Smooth transition for all properties */
+        background: transparent; /* Transparent background for the base design */
+        color: #333; /* Dark text color for the base design */
+        
+        /* --- These properties need to be validated by me later on --- */
+        /* Erzwingt die gleiche Schriftgröße für beide */
+        font-size: 1rem;
+        /* Gibt beiden eine identische Texthöhe */
+        line-height: 1;
+        /* min-width: 100px;       Alle Buttons sind mindestens 120px breit */
+        /* text-align: center;     Text bleibt schön mittig */
+    }
+
+    /* Hover effect for .btn-design */
+    .btn-design:hover {
+        background-color: #555;
+        border-color: #555;
+    }
+
+    .btn-main {
+        background-color: #333; /* Dark background */
+        border-color: #333; /* Border matches the background */
+        color: white; /* White text */
+    }
+
+    /* This is the inverted design of .btn-design */
+    .btn-inverted {
+        background-color: transparent; /* Transparent background */
+        border-color: #333; /* Dark border color */
+        color: #333; /* Dark text */
+    }
+
+    /* Hover effect for .btn-inverted */
+    .btn-inverted:hover {
+        background-color: #555;
+        border-color: #555;
+        color: white; /* Wird beim Drüberfahren wieder solid schwarz */
+    }
+
+    /* Gemeinsamkeit: Kein Hintergrund im Normalzustand */
+    .btn-home:hover {
+        background-color: #4A5D7B;
+        border-color: #4A5D7B;
+        color: #fff;
+    }
+
+    .btn-about-me:hover {
+        background-color: #8E9775;
+        border-color: #8E9775;
+        color: #fff;
+    }
+
+    .btn-vision:hover {
+        background-color: #A67C52;
+        border-color: #A67C52;
+        color: #fff;
+    }
+
+    /* ------------------------------------------------------------------------------------------------------------------------- */
 
     /* -- */
     .landing-page {
@@ -117,7 +239,8 @@
         align-items: center;
         justify-content: space-between;
         min-height: 100vh;
-        background: #d66161;
+        /* TEMPORARY: background color to visualize the grid area of the container. */
+        /* background: #d66161; */
     }
 
     /* ------------------------------------------------------------------------------------------------------------------------- */
@@ -127,33 +250,84 @@
         grid-column: 2 / 7;
         grid-row: 2 / 5;
         align-self: stretch;
-        background: #d6d061;
+        /* TEMPORARY: background color to visualize the grid area of the container. */
+        /* background: #d6d061; */
     }
 
     /* ------------------------------------------------------------------------------------------------------------------------- */
 
     /* The .landing-page-image class is used to style only the elements within the landing page image container. */
     .landing-page-image {
+        /* --- 1. POSITION WITHIN THE GRID --- */
         grid-column: 8 / 11;
         grid-row: 2 / 5;
+        
+        /* --- 2. DIMENSIONS & APPEARANCE --- */
         /*
             The align-self property is set to stretch to make the image take up the full height of the grid area.
             In other words, it will expand to fill the available space not the content, vertically.
         */
         align-self: stretch;
-        background: #a1d661;
+
+        /* --- 3. INNER LAYOUT (Flexbox) --- */
+        /* Changes the container to a flex container, allowing to navigate the image and the button within the container. */
+        display: flex;
+        /* Aligns the content of the flex container horizontally */
+        justify-content: center;
+        /* Aligns the content of the flex container vertically */
+        align-items: center;
+
+        /* --- 4. POSITIONING ANKOUR --- */
         /*
             IMPORTANT: The position property is set to relative to establish a new positioning context for the image and any other
             elements inside the .landing-page-image container. This allows us to position the image and other elements relative
             to this container.
         */
         position: relative;
+
+        /* --- 5. OPTIC & SECURITY --- */
+        /* TEMPORARY: background color to visualize the grid area of the container. */
+        /* background: #a1d661; */
         /*
             The overflow property is set to hidden to prevent any content that exceeds the boundaries of the .landing-page-image
-            container from being visible. This is particularly useful for ensuring that the image does not overflow its container
-            and maintains a clean and organized layout.
+            container from being visible.
         */
         overflow: hidden;
+    }
+
+    /* 2. Der Anker: Er ist genau so groß wie das Bild */
+    .image-container {
+        position: relative;
+        width: 100%; /* Oder eine feste Größe wie 300px */
+        max-height: auto;
+        /* max-width: 400px; */
+        /* TEMPORARY: background color to visualize the grid area of the container. */
+        /* background: #d661c6; */
+    }
+
+    /* 3. Der Button als Planet */
+    .about-me-circle-button-landing-page {
+        position: absolute;
+        /* Positionierung rechts unten am Bildrand */
+        bottom: 5%; 
+        right: 5%;
+        
+        /* Rundes Design */
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        
+        /* Button color */
+        background: #333;
+        color: #fff;
+        /* The cursor property is set to pointer to indicate that the button is clickable. */
+        cursor: pointer;
+        border: none;
+        z-index: 10;
+    }
+
+    .about-me-circle-button-landing-page:hover {
+        background-color: #4A5D7B;
     }
 
     /* ------------------------------------------------------------------------------------------------------------------------- */
@@ -190,35 +364,47 @@
         border: 5px solid #333;
         /*
             The box-shadow property adds a shadow effect around the image.
-            The value 0 10px 20px rgba(0,0,0,0.15) means that the shadow will be positioned 0 pixels horizontally,
-            10 pixels vertically, have a blur radius of 20 pixels, and a color of rgba(0,0,0,0.15) (a semi-transparent black).
+            The value 0 0px 40px rgb(255, 255, 255) means that the shadow will be positioned
+            0 pixels horizontally,
+            0 pixels vertically,
+            have a blur radius of 40 pixels,
+            and a color of rgb(255, 255, 255) (a white shadow).
         */
-        box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        box-shadow: 0 0px 40px #e1e1e123;
     }
 
     /* ------------------------------------------------------------------------------------------------------------------------- */
 
     .about-me-page {
         min-height: 100vh;
-        background: #61d6d6;
+        /* TEMPORARY: background color to visualize the grid area of the container. */
+        /* background: #61d6d6; */
     }
 
     /* ------------------------------------------------------------------------------------------------------------------------- */
 
     .my-vision-page {
         min-height: 100vh;
-        background: #d661d6;
+        /* TEMPORARY: background color to visualize the grid area of the container. */
+        /* background: #d661d6; */
     }
 
     /* ------------------------------------------------------------------------------------------------------------------------- */
 
     .path-to-proficiency-page {
+        /* Sets the minimum height of the .path-to-proficiency-page to 100% of the viewport height (100vh) (Full screen). */
         min-height: 100vh;
-        background: #d66161;
+        /* TEMPORARY: background color to visualize the grid area of the container. */
+        /* background: #ff8989; */
     }
 
     /* ------------------------------------------------------------------------------------------------------------------------- */
 
+    .h1-home {
+        /* font-size: 2.5rem; */
+        font-weight: bold;
+        color: #4A5D7B;
+    }
     /* The h1, h2, and h3 selectors target the first three levels of headings in the HTML document. */
     h1, h2, h3 {
         /* The color property sets the color of the headings. */
