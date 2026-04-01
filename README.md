@@ -13,6 +13,13 @@ My vision is to develop such profound skills in Computer Science that I can unde
 * [Vision](#project-description)
 * [Technologies Used](#technologies-used)
 * [Current Status & Roadmap](#current-status--roadmap)
+* [Feedback](#feedback)
+
+---
+
+## Technologies Used
+* **Current & In Progress:** HTML5, CSS3, Git
+* **Future Vision:** JavaScript, SQL, Python, Computer Science Fundamentals, System Architecture, Problem Solving strategies.
 
 ---
 
@@ -21,6 +28,5 @@ View my detailed roadmap and upcoming tasks on my **[Portfolio Development Board
 
 ---
 
-## Technologies Used
-* **Current & In Progress:** HTML5, CSS3, Git
-* **Future Vision:** JavaScript, SQL, Python, Computer Science Fundamentals, System Architecture, Problem Solving strategies.
+### Feedback
+I appreciate any feedback—and I really mean any! If you have suggestions or want to share your thoughts, please feel free to contact me.
