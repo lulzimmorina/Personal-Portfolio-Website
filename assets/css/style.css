@@ -89,7 +89,7 @@
     /* The main element is used to define the main content area of the page. */
     main {
         /* TEMPORARY: background color to visualize the grid area of the container. */
-        /* background: hsl(223, 43%, 40%); */
+        background: hsl(0, 0%, 82%);
     }
 
     /* ------------------------------------------------------------------------------------------------------------------------- */
