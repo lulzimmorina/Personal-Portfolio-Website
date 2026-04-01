@@ -247,42 +247,6 @@
     
     /* ------------------------------------------------------------------------------------------------------------------------- */
 
-    /* Class for the about me page grid layout */
-    .about-me-page {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: repeat(5, 1fr);
-        align-items: center;
-        justify-content: space-between;
-        min-height: 100vh;
-    }
-    
-    /* ------------------------------------------------------------------------------------------------------------------------- */
-
-    /* Class for the my vision page grid layout */
-    .my-vision-page {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: repeat(5, 1fr);
-        align-items: center;
-        justify-content: space-between;
-        min-height: 100vh;
-    }
-
-    /* ------------------------------------------------------------------------------------------------------------------------- */
-    
-    /* Class for the path to proficiency page grid layout */
-    .path-to-proficiency-page {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: repeat(5, 1fr);
-        align-items: center;
-        justify-content: space-between;
-        min-height: 100vh;
-    }
-
-    /* ------------------------------------------------------------------------------------------------------------------------- */
-
     /* The .landing-page-content class is used to style the content area on the landing page. */
     .landing-page-content {
         grid-column: 2 / 7;
@@ -411,40 +375,69 @@
         box-shadow: 0 0px 40px #e1e1e123;
     }
 
-    /* ------------------------------------------------------------------------------------------------------------------------- */
+/*
+    =============================================================================================================================
+     ABOUT ME PAGE
+    =============================================================================================================================
+     This section is the "2nd section" of the website, which is the about me page.
+    =============================================================================================================================
+*/
 
+    /* Class for the about me page grid layout */
     .about-me-page {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        align-items: center;
+        justify-content: space-between;
         min-height: 100vh;
-        /* TEMPORARY: background color to visualize the grid area of the container. */
-        /* background: #61d6d6; */
     }
-
+    
     /* ------------------------------------------------------------------------------------------------------------------------- */
 
+/*
+    =============================================================================================================================
+     MY VISION PAGE
+    =============================================================================================================================
+     This section is the "3rd section" of the website, which is the my vision page.
+    =============================================================================================================================
+*/
+
+    /* Class for the my vision page grid layout */
     .my-vision-page {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        align-items: center;
+        justify-content: space-between;
         min-height: 100vh;
-        /* TEMPORARY: background color to visualize the grid area of the container. */
-        /* background: #d661d6; */
     }
 
     /* ------------------------------------------------------------------------------------------------------------------------- */
+    
+/*
+    =============================================================================================================================
+     PATH TO PROFICIENCY PAGE
+    =============================================================================================================================
+     This section is the "4th section" of the website, which is the path to proficiency page.
+    =============================================================================================================================
+*/
 
+    /* Class for the path to proficiency page grid layout */
     .path-to-proficiency-page {
-        /* Sets the minimum height of the .path-to-proficiency-page to 100% of the viewport height (100vh) (Full screen). */
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        align-items: center;
+        justify-content: space-between;
         min-height: 100vh;
-        /* TEMPORARY: background color to visualize the grid area of the container. */
-        /* background: #ff8989; */
     }
 
     /* ------------------------------------------------------------------------------------------------------------------------- */
 
+    /* --- */
     .h1-home {
         /* font-size: 2.5rem; */
         font-weight: bold;
         color: #4A5D7B;
-    }
-    /* The h1, h2, and h3 selectors target the first three levels of headings in the HTML document. */
-    h1, h2, h3 {
-        /* The color property sets the color of the headings. */
-        color: #222;
     }
