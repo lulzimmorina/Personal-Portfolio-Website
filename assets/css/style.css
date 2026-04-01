@@ -3,7 +3,7 @@
     PROJECT:        Portfolio Development Project
     AUTHOR:         Lulzim Morina
     LAST UPDATED:   01.04.2026
-    DESCRIPTION:    This CSS file is the main stylesheet for the portfolio website. It contains all the styles that define
+    DESCRIPTION:    This CSS file is the main style sheet for the portfolio website. It contains all the styles that define
                     the look and feel of the website. The styles in this file are applied to the HTML elements in the index.html
                     file to create a visually appealing and user-friendly website.
     =============================================================================================================================
@@ -114,11 +114,11 @@
     /* -- */
 
     .header-container {
-        width: 90%; /* Nicht ganz am Rand kleben */
+        width: 90%; /* width set to 90% for centering and not touching the edges     */
         max-width: 1200px;
         margin: 0 auto;
         display: flex;
-        justify-content: space-between; /* Links: Logo, Rechts: Nav */
+        justify-content: space-between; /* Left side: Logo, Right side: Navigation */
         align-items: center;
     }
 
@@ -126,22 +126,22 @@
 
     /* -- */
     .nav-links {
-        list-style: none; /* Entfernt die Punkte/Bullets */
+        list-style: none; /* Removes the dots/bullets */
         display: flex;
         align-items: center;
-        gap: 30px; /* Abstand zwischen den Links/Buttons */
+        gap: 30px; /* Distance between the links/buttons */
     }
 
     /* ------------------------------------------------------------------------------------------------------------------------- */
 
     /* -- */
     .nav-item {
-        display: inline-block; /* DAS ist der Schlüssel! */
-        text-decoration: none; /* Unterstrich weg */
+        display: inline-block; /* inline-block removes the default list styling */
+        text-decoration: none; /* text-decoration set to none changes the link style, so that it doesn't have an underline */
         color: #333;
         font-weight: 500;
-        transition: color 0.3s; /* Weicher Übergang bei Hover */
-        padding: 10px 20px;    /* Jetzt funktionieren die Abstände richtig */
+        transition: color 0.3s; /* The transition property defines the animation for the color change */
+        padding: 10px 20px;    /* padding moves the .nav-item's inner content along the x-axis and y-axis */
     }
 
     /* ------------------------------------------------------------------------------------------------------------------------- */
@@ -168,12 +168,12 @@
         color: #333; /* Dark text color for the base design */
         
         /* --- These properties need to be validated by me later on --- */
-        /* Erzwingt die gleiche Schriftgröße für beide */
+        /* Creates a consistent font size. In this case, it's set to 1rem (16px) for all with the .btn-design class */
         font-size: 1rem;
-        /* Gibt beiden eine identische Texthöhe */
+        /* Sets the line height to 1 for consistent vertical spacing for all .btn-design */
         line-height: 1;
-        /* min-width: 100px;       Alle Buttons sind mindestens 120px breit */
-        /* text-align: center;     Text bleibt schön mittig */
+        /* min-width: 100px;       All buttons are at least 100px wide */
+        /* text-align: center;     The text is centered within the button */
     }
 
     /* Hover effect for .btn-design */
@@ -199,22 +199,24 @@
     .btn-inverted:hover {
         background-color: #555;
         border-color: #555;
-        color: white; /* Wird beim Drüberfahren wieder solid schwarz */
+        color: white; /* Change text color to white on hover */
     }
 
-    /* Gemeinsamkeit: Kein Hintergrund im Normalzustand */
+    /* Hover effect for .btn-home */
     .btn-home:hover {
         background-color: #4A5D7B;
         border-color: #4A5D7B;
         color: #fff;
     }
 
+    /* Hover effect for .btn-about-me */
     .btn-about-me:hover {
         background-color: #8E9775;
         border-color: #8E9775;
         color: #fff;
     }
 
+    /* Hover effect for .btn-vision */
     .btn-vision:hover {
         background-color: #A67C52;
         border-color: #A67C52;
@@ -277,7 +279,7 @@
         /* Aligns the content of the flex container vertically */
         align-items: center;
 
-        /* --- 4. POSITIONING ANKOUR --- */
+        /* --- 4. POSITIONING ANCHOR --- */
         /*
             IMPORTANT: The position property is set to relative to establish a new positioning context for the image and any other
             elements inside the .landing-page-image container. This allows us to position the image and other elements relative
@@ -295,24 +297,24 @@
         overflow: hidden;
     }
 
-    /* 2. Der Anker: Er ist genau so groß wie das Bild */
+    /* This container is used as an anchor for positioning the image and button within the landing page image area. */
     .image-container {
         position: relative;
-        width: 100%; /* Oder eine feste Größe wie 300px */
+        width: 100%;
         max-height: auto;
         /* max-width: 400px; */
         /* TEMPORARY: background color to visualize the grid area of the container. */
         /* background: #d661c6; */
     }
 
-    /* 3. Der Button als Planet */
+    /* Round-Button */
     .about-me-circle-button-landing-page {
         position: absolute;
-        /* Positionierung rechts unten am Bildrand */
+        /* Position bottom-right corner of the image */
         bottom: 5%; 
         right: 5%;
         
-        /* Rundes Design */
+        /* Circle Design with the */
         width: 80px;
         height: 80px;
         border-radius: 50%;
