@@ -76,7 +76,7 @@
         /* The z-index property is set to 1000 to ensure that the header stays above other content on the page. */
         z-index: 1000;
         /* TEMPORARY: background color to visualize the grid area of the container. */
-        background: hsl(0, 0%, 100%);
+        background: #F4F4F4;
         /* slight shadow to create a separation between the header and the main content. */
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
@@ -89,7 +89,7 @@
     /* The main element is used to define the main content area of the page. */
     main {
         /* TEMPORARY: background color to visualize the grid area of the container. */
-        background: hsl(0, 0%, 82%);
+        background: #F4F4F4;
     }
 
     /* ------------------------------------------------------------------------------------------------------------------------- */
