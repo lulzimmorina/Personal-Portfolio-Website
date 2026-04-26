@@ -2,7 +2,7 @@
     =============================================================================================================================
     PROJECT:        Portfolio Development Project
     AUTHOR:         Lulzim Morina
-    LAST UPDATED:   14.04.2026
+    LAST UPDATED:   26.04.2026
     DESCRIPTION:    This CSS file is the main style sheet for the portfolio website. It contains all the styles that define
                     the look and feel of the website. The styles in this file are applied to the HTML elements in the index.html
                     file to create a visually appealing and user-friendly website.
@@ -310,7 +310,7 @@
     }
 
     .about-me-circle-button-landing-page:hover {
-        background-color: #4A5D7B;
+        background-color: #8E9775;
         border: #333 3px solid; /* Adds a border on hover. You can use solid, dashed, dotted */
         box-shadow: #333 0px 0px 10px 2px; /* Adds a shadow effect on hover */
     }
