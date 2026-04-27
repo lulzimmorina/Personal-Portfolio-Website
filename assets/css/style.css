@@ -66,21 +66,17 @@
     /* The header element typically contains the navigation and the main heading of the page. */
     header {
         height: 60px;
-        /* The width property is set to 100% to make the header span the entire width of the page. */
-        width: 100%;
-        /* The position property is set to fixed to keep the header at the top of the page even when scrolling. */
-        position: fixed;
-        /* The top and left properties are set to 0 to position the header at the top-left corner of the page. */
+        /* width: 100%; */
+        position: sticky;
         top: 0;
-        /* left: 0; */
-        /* The z-index property is set to 1000 to ensure that the header stays above other content on the page. */
+        left: 0;
         z-index: 1000;
-        /* TEMPORARY: background color to visualize the grid area of the container. */
         background: #F4F4F4;
-        /* slight shadow to create a separation between the header and the main content. */
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 4px #8E9775;
 
+        /* Flexbox für die Ausrichtung des Inhalts */
         display: flex;
+        justify-content: center; /* Zentriert den Inhalt horizontal */
         align-items: center;
     }
 
@@ -112,15 +108,13 @@
 */
 
     /* -- */
-
     .header-container {
-        width: 90%; /* width set to 90% for centering and not touching the edges     */
+        width: 90%;
         max-width: 1200px;
-        margin: 0 auto;
         display: flex;
-        justify-content: space-between; /* Left side: Logo, Right side: Navigation */
+        justify-content: space-between; /* Logo links, Nav rechts */
         align-items: center;
-    }
+    }   
 
     /* ------------------------------------------------------------------------------------------------------------------------- */
 
@@ -356,7 +350,7 @@
             have a blur radius of 40 pixels,
             and a color of rgb(255, 255, 255) (a white shadow).
         */
-        box-shadow: 0 0px 40px #e1e1e123;
+        box-shadow: 0 0px 5px 2px #8E9775;
     }
 
 /*
