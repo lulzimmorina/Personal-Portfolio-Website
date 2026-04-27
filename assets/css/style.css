@@ -346,7 +346,7 @@
             The value 5px solid #333 means that the border will be 5 pixels wide,
             solid in style, and have a color of #333 (a dark gray).
         */
-        border: 5px solid #333;
+        border: 5px solid #8E9775;
         /*
             The box-shadow property adds a shadow effect around the image.
             The value 0 0px 40px rgb(255, 255, 255) means that the shadow will be positioned
