@@ -185,8 +185,8 @@
 
     /* Hover effect for .btn-home */
     .btn-home:hover {
-        background-color: #4A5D7B;
-        border-color: #4A5D7B;
+        background-color: #8E9775;
+        border-color: #8E9775;
         color: #fff;
     }
 
@@ -199,8 +199,8 @@
 
     /* Hover effect for .btn-vision */
     .btn-vision:hover {
-        background-color: #A67C52;
-        border-color: #A67C52;
+        background-color: #8E9775;
+        border-color: #8E9775;
         color: #fff;
     }
     
