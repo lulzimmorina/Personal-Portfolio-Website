@@ -1,418 +1,283 @@
 /*
-    =============================================================================================================================
-    PROJECT:        Portfolio Development Project
+    ============================================================================
+    PROJECT:        Path to Proficiency
     AUTHOR:         Lulzim Morina
-    LAST UPDATED:   26.04.2026
-    DESCRIPTION:    This CSS file is the main style sheet for the portfolio website. It contains all the styles that define
-                    the look and feel of the website. The styles in this file are applied to the HTML elements in the index.html
-                    file to create a visually appealing and user-friendly website.
-    =============================================================================================================================
-*/
-/*
-    =============================================================================================================================
-    1. CSS Reset & Base Styles
-    =============================================================================================================================
-     In this section, we will define the CSS reset and base styles for the website. The CSS reset is used to remove any default
-     styling provided by the browser, ensuring a consistent look across different browsers. The base styles set the default
-     font, colors, and other basic styles for the entire website.
-    =============================================================================================================================
+    LAST UPDATE:    02.05.2026
+    ============================================================================
 */
 
-    /* The universal selector (*) is used to apply styles to all elements on the page. */
-    * {
-        /* The margin and padding are set to 0 to remove any default spacing provided by the browser.
-        This ensures that all elements start with a consistent baseline for spacing. */
-        margin: 0;
-        padding: 0;
-        /* The box-sizing property controls how the total width and height of an element are calculated. By setting it
-        to border-box, the padding and border are included in the total width and height, which makes it easier to manage layouts. */
-        box-sizing: border-box;
-    }
+/* 1. VARIABLES (:root) */
+:root {
+    /* Farben */
+    --primary-color: #333;
+    --accent-color: #7DA4B3;    /* Dein spezielles Grün */
+    --bg-main: #F4F4F4;
+    --white: #ffffff;
+    --hover-dark: #555;
+    --bg-white-blue: #F4F7F8;
+    --test-color-1: #7DA4B3;
+    --test-color-2: #455A64;
+    --test-color-3: #2C3335;
+    --test-color-4: #DDE4E6;
 
-    /* ------------------------------------------------------------------------------------------------------------------------- */
+    /* Layout */
+    --header-height: 60px;
+    --max-width: 1200px;
+    --container-width: 90%;
+    --transition-speed: 0.3s;
+}
 
-    /* The html element manipulates the root of the document. */
-    html {
-        /* The scroll-behavior property is set to smooth to enable smooth scrolling when navigating to different sections of the page. */
-        scroll-behavior: smooth;
-    }
+/* 2. CSS RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    /* ------------------------------------------------------------------------------------------------------------------------- */
+html {
+    scroll-behavior: smooth;
+}
 
-    /* The body element in CSS changes the overall appearance of the page. */
-    body {
-        /* The font-family property specifies the font for the text on the page. In this case, a stack of fonts is provided,
-        from left to right. The browser will use the first available font in the list. */
-        font-family: Arial, Helvetica, sans-serif;
-        /* The line-height property controls the spacing between lines of text. The value is multiplied by the font size to determine
-        the actual line height. 1 means equal to the font size, or 100% of the font size. */
-        line-height: 1.6;
-        /* The color property sets the color of the text on the page. */
-        color: #333;
-        /* The background-color property sets the background color of the page. */
-        /* background-color: #f4f4f4; */
-    }
+/* 3. BASE STYLES */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: var(--primary-color);
+    background-color: var(--white);
+}
 
-/*
-    =============================================================================================================================
-    2. LAYOUT STRUCTURE & STYLES
-    =============================================================================================================================
-     In this section, we will define the layout structure and styles for the main sections of the website, including the header,
-     main content area, and footer. We will use CSS properties to control the positioning, spacing, and overall appearance of
-     these sections to create a cohesive and visually appealing layout.
-    =============================================================================================================================
+/* Überschriften-Logik */
+.h1-home, .h2-about-me, .h2-my-vision, .h2-path-to-proficiency {
+    font-weight: bold;
+    color: var(--test-color-1);
+}
+
+/* 4. LAYOUT COMPONENTS */
+header {
+    height: var(--header-height);
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--bg-main);
+    box-shadow: 0 2px 4px var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-container {
+    width: var(--container-width);
+    max-width: var(--max-width);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main {
+    background: var(--bg-main);
+}
+
+footer {
+    height: 80px;
+}
+
+/* 5. SPECIFIC ELEMENTS / MODULES */
+
+/* --- Navigation & Buttons --- */
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.btn-design {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: normal;
+    font-family: inherit;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all var(--transition-speed) ease;
+    background: transparent;
+    color: var(--primary-color);
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.btn-design:hover {
+    transform: translateY(-2px); /* Die Box "hebt ab" */
+    background-color: var(--hover-dark);
+    border-color: var(--hover-dark);
+    color: var(--white);
+}
+
+.btn-main {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--white);
+}
+
+.btn-inverted {
+    background-color: transparent;
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn-inverted:hover, .btn-home:hover, .btn-about-me:hover, .btn-vision:hover {
+    transform: translateY(-2px); /* Die Box "hebt ab" */
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--white);
+}
+
+/* --- Landing Page Grid --- */
+.landing-page {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    align-items: center;
+    min-height: 100vh;
+}
+
+.landing-page-content {
+    grid-column: 2 / 7;
+    grid-row: 2 / 5;
+    align-self: stretch;
+}
+
+.landing-page-image {
+    grid-column: 8 / 11;
+    grid-row: 2 / 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+}
+
+.landing-page-image img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--accent-color);
+    box-shadow: 0 0px 5px 2px var(--accent-color);
+}
+
+/* Der Who-am-I Circle Button */
+.about-me-circle-button-landing-page {
+    position: absolute;
+    bottom: 5%; 
+    right: 5%;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--accent-color);
+    color: var(--white);
+    cursor: pointer;
+    border: none;
+    z-index: 10;
+    transition: all var(--transition-speed);
+}
+
+.about-me-circle-button-landing-page:hover {
+    background-color: var(--bg-main);
+    color: var(--accent-color);
+    border: var(--accent-color) 3px solid;
+    box-shadow: var(--primary-color) 0px 0px 10px 2px;
+}
+
+/* --- Other Pages (About, Vision, Path) --- */
+.about-me-page, .my-vision-page, .path-to-proficiency-page {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    align-items: center;
+    min-height: 100vh;
+}
+
+.about-me-page-profile-picture {
+    grid-column: 2 / 5;
+    grid-row: 2 / 3;
+}
+
+.about-me-page-profile-picture img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-top-left-radius: 20%;
+    border-bottom-right-radius: 30%;
+    border: 5px solid var(--primary-color);
+    box-shadow: 0 0px 40px #e1e1e123;
+}
+
+/* Der Vater: Er bestimmt, wie viele Boxen nebeneinander stehen */
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Macht es automatisch responsiv! */
+    gap: 20px; /* Abstand zwischen den Boxen */
+    padding: 20px;
+}
+
+/* Die Kinder: Alle divs, die direkt im skill-grid liegen */
+.skill-grid > div {
+    background: var(--white);
+    border: 1px solid var(--primary-color);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    transition: all var(--transition-speed); /* Für den sanften Schweb-Effekt */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Der Schweb-Effekt (Hover) */
+.skill-grid > div:hover {
+    transform: translateY(-5px); /* Die Box "hebt ab" */
+    box-shadow: 0 12px 20px var(--accent-color); /* Der Schatten wird tiefer/farbiger */
+    background-color: var(--accent-color);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.header-logo-container img {
+    height: 40px;
+    width: auto;
+}
+
+/* .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 70%, #000 100%);
+    pointer-events: none;
 */
 
-    /* The header element typically contains the navigation and the main heading of the page. */
-    header {
-        height: 60px;
-        /* width: 100%; */
-        position: sticky;
-        top: 0;
-        left: 0;
-        z-index: 1000;
-        background: #F4F4F4;
-        box-shadow: 0 2px 4px #8E9775;
+.video-background {
+    width: 100%;            /* Füllt die volle Breite */
+    height: 85vh;           /* vh = Viewport Height (85% der Bildschirmhöhe) */
+    object-fit: cover;      /* WICHTIG: Schneidet Ränder ab, damit es bündig ist */
+    /* display: block;         Entfernt kleine Lücken unter dem Video */
+}
 
-        /* Flexbox für die Ausrichtung des Inhalts */
-        display: flex;
-        justify-content: center; /* Zentriert den Inhalt horizontal */
-        align-items: center;
-    }
+/* .video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 85vh;
+    overflow: hidden;
+    background: #000;
+} */
 
-    /* ------------------------------------------------------------------------------------------------------------------------- */
+/* 6. UTILITIES (Leer für später) */
 
-    /* The main element is used to define the main content area of the page. */
-    main {
-        /* TEMPORARY: background color to visualize the grid area of the container. */
-        background: #F4F4F4;
-    }
-
-    /* ------------------------------------------------------------------------------------------------------------------------- */
-
-    /* The footer element typically contains copyright information and other footer content. */
-    footer {
-        height: 80px;
-        /* TEMPORARY: background color to visualize the grid area of the container. */
-        /* background: hsl(174, 59%, 61%); */
-    }
-
-/*
-    =============================================================================================================================
-    3. SPECIFIC ELEMENT STYLES
-    =============================================================================================================================
-     In this section, we will define styles for specific elements and components within the website, such as the landing page,
-     about me section, vision statement, and path to proficiency. These styles will include properties for layout, typography,
-     colors, and other visual aspects to enhance the overall design and user experience of the website.
-    =============================================================================================================================
-*/
-
-    /* -- */
-    .header-container {
-        width: 90%;
-        max-width: 1200px;
-        display: flex;
-        justify-content: space-between; /* Logo links, Nav rechts */
-        align-items: center;
-    }   
-
-    /* ------------------------------------------------------------------------------------------------------------------------- */
-
-    /* -- */
-    .nav-links {
-        list-style: none; /* Removes the dots/bullets */
-        display: flex;
-        align-items: center;
-        gap: 30px; /* Distance between the links/buttons */
-    }
-
-    /* ------------------------------------------------------------------------------------------------------------------------- */
-
-    /* This is the core design for all buttons */
-    .btn-design {
-        display: inline-block;
-        padding: 10px 20px;
-        border-radius: 8px;
-        text-decoration: none;
-        font-weight: normal;
-        font-family: inherit; /* Inherits the font family from body */
-        cursor: pointer; /* Shows a pointer cursor on hover to indicate it's clickable */
-        border: 1px solid transparent; /* Border is transparent by default, but will be visible in the other designs */
-        transition: all 0.3s ease; /* Smooth transition for all properties */
-        background: transparent; /* Transparent background for the base design */
-        color: #333; /* Dark text color for the base design */
-        
-        /* --- These properties need to be validated by me later on --- */
-        /* Creates a consistent font size. In this case, it's set to 1rem (16px) for all with the .btn-design class */
-        font-size: 1rem;
-        /* Sets the line height to 1 for consistent vertical spacing for all .btn-design */
-        line-height: 1;
-        /* min-width: 100px;       All buttons are at least 100px wide */
-        /* text-align: center;     The text is centered within the button */
-    }
-
-    /* Hover effect for .btn-design */
-    .btn-design:hover {
-        background-color: #555;
-        border-color: #555;
-    }
-
-    .btn-main {
-        background-color: #8E9775;
-        border-color: #8E9775; /* Border matches the background */
-        color: white; /* White text */
-    }
-
-    /* This is the inverted design of .btn-design */
-    .btn-inverted {
-        background-color: transparent; /* Transparent background */
-        border-color: #333; /* Dark border color */
-        color: #333; /* Dark text */
-    }
-
-    /* Hover effect for .btn-inverted */
-    .btn-inverted:hover {
-        background-color: #8E9775;
-        border-color: #8E9775;
-        color: white; /* Change text color to white on hover */
-    }
-
-    /* Hover effect for .btn-home */
-    .btn-home:hover {
-        background-color: #8E9775;
-        border-color: #8E9775;
-        color: #fff;
-    }
-
-    /* Hover effect for .btn-about-me */
-    .btn-about-me:hover {
-        background-color: #8E9775;
-        border-color: #8E9775;
-        color: #fff;
-    }
-
-    /* Hover effect for .btn-vision */
-    .btn-vision:hover {
-        background-color: #8E9775;
-        border-color: #8E9775;
-        color: #fff;
-    }
-    
-    /* ------------------------------------------------------------------------------------------------------------------------- */
-
-    /* Class for the landing page grid layout */
-    .landing-page {
-        /* The display grid property is used to create a grid layout for the landing page. */
-        display: grid;
-        /* The grid-template-columns property defines the number of columns in the grid and their widths. In this case, we
-        are creating a 12-column grid where each column takes up an equal fraction of the available space (1fr).
-            - repeat is a shorthand function that allows us to repeat a pattern of columns.
-            - 12 is the number of times the pattern should be repeated.
-            - 1fr means that each column will take up an equal fraction of the available space.
-        */
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: repeat(5, 1fr);
-        /* The align-items property is set to center to vertically center the content within the landing page. */
-        align-items: center;
-        justify-content: space-between;
-        min-height: 100vh;
-        /* TEMPORARY: background color to visualize the grid area of the container. */
-        /* background: #d66161; */
-    }
-    
-    /* ------------------------------------------------------------------------------------------------------------------------- */
-
-    /* The .landing-page-content class is used to style the content area on the landing page. */
-    .landing-page-content {
-        grid-column: 2 / 7;
-        grid-row: 2 / 5;
-        align-self: stretch;
-        /* TEMPORARY: background color to visualize the grid area of the container. */
-        /* background: #d6d061; */
-    }
-
-    /* ------------------------------------------------------------------------------------------------------------------------- */
-
-    /* The .landing-page-image class is used to style only the elements within the landing page image container. */
-    .landing-page-image {
-        /* --- 1. POSITION WITHIN THE GRID --- */
-        grid-column: 8 / 11;
-        grid-row: 2 / 5;
-        
-        /* --- 2. DIMENSIONS & APPEARANCE --- */
-        /*
-            The align-self property is set to stretch to make the image take up the full height of the grid area.
-            In other words, it will expand to fill the available space not the content, vertically.
-        */
-        align-self: stretch;
-
-        /* --- 3. INNER LAYOUT (Flexbox) --- */
-        /* Changes the container to a flex container, allowing to navigate the image and the button within the container. */
-        display: flex;
-        /* Aligns the content of the flex container horizontally */
-        justify-content: center;
-        /* Aligns the content of the flex container vertically */
-        align-items: center;
-
-        /* --- 4. POSITIONING ANCHOR --- */
-        /*
-            IMPORTANT: The position property is set to relative to establish a new positioning context for the image and any other
-            elements inside the .landing-page-image container. This allows us to position the image and other elements relative
-            to this container.
-        */
-        position: relative;
-
-        /* --- 5. OPTIC & SECURITY --- */
-        /* TEMPORARY: background color to visualize the grid area of the container. */
-        /* background: #a1d661; */
-        /*
-            The overflow property is set to hidden to prevent any content that exceeds the boundaries of the .landing-page-image
-            container from being visible.
-        */
-        overflow: hidden;
-    }
-
-    /* This container is used as an anchor for positioning the image and button within the landing page image area. */
-    .image-container {
-        position: relative;
-        width: 100%;
-        max-height: auto;
-        /* max-width: 400px; */
-        /* TEMPORARY: background color to visualize the grid area of the container. */
-        /* background: #d661c6; */
-    }
-
-    /* Round-Button */
-    .about-me-circle-button-landing-page {
-        position: absolute;
-        /* Position bottom-right corner of the image */
-        bottom: 5%; 
-        right: 5%;
-        
-        /* Circle Design with the */
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        
-        /* Button color */
-        background: #8E9775;
-        color: #fff;
-        /* The cursor property is set to pointer to indicate that the button is clickable. */
-        cursor: pointer;
-        border: none;
-        z-index: 10;
-    }
-
-    .about-me-circle-button-landing-page:hover {
-        background-color: #F4F4F4;
-        color: #8E9775;
-        border: #8E9775 3px solid; /* Adds a border on hover. You can use solid, dashed, dotted */
-        box-shadow: #333 0px 0px 10px 2px; /* Adds a shadow effect on hover */
-    }
-
-    /* ------------------------------------------------------------------------------------------------------------------------- */
-
-    /* The img selector targets the image element within the .landing-page-image class. */
-    .landing-page-image img {
-        /* The width property is set to 100% to make the image take up the full width of its container. */
-        width: 100%;
-        /*
-            The aspect-ratio property is set to 1 / 1 to maintain a square aspect ratio for the image. This ensures that the
-            image will always be displayed as a square, regardless of its original dimensions.
-        */
-        aspect-ratio: 1 / 1;
-        /*
-            The object-fit property is used to specify how the content of a replaced element, such as an image, should be resized
-            to fit its container.
-            The value cover means that the image will be scaled to cover the entire container, while maintaining its aspect ratio.
-            This may result in some parts of the image being cropped if the aspect ratio of the image does not match the 
-            aspect ratio of the container.
-        */
-        object-fit: cover;
-        /*
-            The object-position property selects which part of the image to show when the image is cropped.
-            The value center means that the center of the image will be shown.
-        */
-        object-position: center;
-        /* Turns the image into a circle by setting the border-radius to 50%. */
-        border-radius: 50%;
-        /*
-            The border property adds a border around the image.
-            The value 5px solid #333 means that the border will be 5 pixels wide,
-            solid in style, and have a color of #333 (a dark gray).
-        */
-        border: 5px solid #8E9775;
-        /*
-            The box-shadow property adds a shadow effect around the image.
-            The value 0 0px 40px rgb(255, 255, 255) means that the shadow will be positioned
-            0 pixels horizontally,
-            0 pixels vertically,
-            have a blur radius of 40 pixels,
-            and a color of rgb(255, 255, 255) (a white shadow).
-        */
-        box-shadow: 0 0px 5px 2px #8E9775;
-    }
-
-/*
-    =============================================================================================================================
-     ABOUT ME PAGE
-    =============================================================================================================================
-     This section is the "2nd section" of the website, which is the about me page.
-    =============================================================================================================================
-*/
-
-    /* Class for the about me, my vision, and path to proficiency page grid layout */
-    .about-me-page,
-    .my-vision-page,
-    .path-to-proficiency-page {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: repeat(5, 1fr);
-        align-items: center;
-        justify-content: space-between;
-        min-height: 100vh;
-    }
-
-    .about-me-page-profile-picture {
-        grid-column: 2 / 5;
-        grid-row: 2 / 3;
-        align-self: stretch;
-    }
-
-    .about-me-page-profile-picture img {
-        width: 100%;
-        aspect-ratio: 1 / 1;
-        object-fit: cover;
-        object-position: center;
-        border-top-left-radius: 20%;
-        border-bottom-right-radius: 30%;
-        border: 5px solid #333;
-        box-shadow: 0 0px 40px #e1e1e123;
-    }
-
-    /* ------------------------------------------------------------------------------------------------------------------------- */
-
-    /* --- */
-    .h1-home {
-        /* font-size: 2.5rem; */
-        font-weight: bold;
-        color: #8E9775;
-    }
-
-    .h2-about-me {
-        /* font-size: 1.5rem; */
-        font-weight: bold;
-        color: #8E9775;
-    }
-
-    .h2-my-vision {
-        /* font-size: 1.5rem; */
-        font-weight: bold;
-        color: #8E9775;
-    }
-
-    .h2-path-to-proficiency {
-        /* font-size: 1.5rem; */
-        font-weight: bold;
-        color: #8E9775;
-    }
+/* 7. MEDIA QUERIES (Leer für später) */
