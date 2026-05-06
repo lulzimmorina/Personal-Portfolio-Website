@@ -82,6 +82,16 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+.header-logo {
+    height: 100px;         /* Die feste Höhe deines Logos */
+    width: auto;           /* Lässt die Breite automatisch passend zur Höhe berechnen */
+    position: relative;    /* Ermöglicht das Verschieben über die Kante mit 'bottom' */
+    /* MATHEMATIK: Wenn das Logo 100px hoch ist, müssen 50px rausgucken für die Hälfte */
+    bottom: -50px;         /* Schiebt das Logo exakt um die Hälfte seiner Höhe nach unten */
+    z-index: 110;          /* Stellt sicher, dass das Logo über dem Schatten des Headers liegt */
+    filter: drop-shadow(0px 4px 10px rgba(0,0,0,0.15)); /* Erzeugt Tiefe zum Content hin */
+    transition: transform 0.5s ease-in-out; /* Sorgt für eine flüssige Animation beim Hovern */
+}
 }
 
 main {
