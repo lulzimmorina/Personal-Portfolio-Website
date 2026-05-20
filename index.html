@@ -1,95 +1,413 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
     <!-- Head -->
     <head>
+
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portfolio Development Project - Lulzim Morina</title>
-        <link rel="stylesheet" href="assets/css/style.css">
+        <title>Project: Path to Proficiency - Lulzim Morina</title>
+        <link rel="stylesheet" href="assets/css/main.css">
+
     </head>
+
     <!-- Body -->
-    <body>
+    <body class="l-app-wrapper">
+
         <!-- Header -->
-        <header>
-            <div class="header-container">
-                <div class="header-logo-container">
-                    <img class="header-logo" src="assets/img/logo.png" alt="My Logo">
+        <header class="l-header">
+
+            <!-- Header - Inner -->
+            <div class="l-header__inner">
+
+                <!-- Header - Left Section (Logo) -->
+                <div class="l-header__logo">
+
+                    <a href="#landing-page">
+
+                        <img src="assets/img/logo/logo_slate.png" alt="My Logo" class="c-nav-header__logo">
+
+                    </a>
+
                 </div>
-                <nav>
-                    <ul class="nav-links">
-                        <li><a href="#home" class="btn-design btn-home">Home</a></li>
-                        <li><a href="#about-me" class="btn-design btn-about-me">About Me</a></li>
-                        <li><a href="#my-vision" class="btn-design btn-vision">My Vision</a></li>
-                        <li><a href="#path-to-proficiency" class="btn-design btn-main">Path to Proficiency</a></li>
-                        <li><a href="path-to-proficiency/index.html" class="btn-design btn-main">>></a></li>                        
-                        <li><button class="btn-design btn-inverted">Contact Me</button></li>
-                    </ul>
-                </nav>
+
+                <!-- Header - Mid Section -->
+                <div class="l-header__nav c-glass">
+
+                    <nav class="c-nav-header">
+
+                        <ul>
+
+                            <li><a href="#my-vision" class="c-nav-header__link">My Vision</a></li>
+                            <li><a href="#about-me" class="c-nav-header__link">About Me</a></li>
+                            <li><a href="#path-to-proficiency" class="c-nav-header__link">P2P</a></li>
+
+                        </ul>
+
+                    </nav>
+
+                </div>
+
+                <!-- Header - Right Section -->
+                <div class="l-header__contact">
+
+                    <nav class="c-nav-header">
+
+                        <ul>
+
+                            <li><a href="path-to-proficiency/index.html" class="c-nav-header__link c-glass">P2P</a></li>                        
+                            <li><button class="c-nav-header__link c-glass">Contact Me</button></li>
+
+                        </ul>
+
+                    </nav>
+
+                </div>
+
             </div>
+
         </header>
+
+        <!-- Sidebar: Main Panel -->
+        <aside id="sidebar-main" class="c-sidebar c-glass">
+
+            <!-- Sidebar: Close Btn -->
+            <button class="c-sidebar__close-btn" aria-label="Close Menu" onclick="closeSidebarCompletely()">
+
+                <svg xmlns="http://w3.org" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+
+            </button>
+            
+            <!-- Sidebar: Toggle Arrow -->
+            <button class="c-sidebar__toggle" aria-label="Open Menu" onclick="toggleSidebarState()">
+
+                <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-big-right"><path d="M13.207 19.793a.707.707 0 0 1-1.207-.5V16a1 1 0 0 0-1-1H5a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1h6a1 1 0 0 0 1-1V4.707a.707.707 0 0 1 1.207-.5l6.94 6.94a1.207 1.207 0 0 1 0 1.707z"/></svg>
+
+            </button>
+            
+            <div class="c-sidebar__main-content">
+
+                <nav class="c-sidebar__nav">
+
+                    <ul>
+
+                        <li><button class="c-sidebar__btn c-sidebar__btn--color-1" onclick="expandSidebarSub('git')">Git</button></li>
+                        <li><button class="c-sidebar__btn c-sidebar__btn--color-2" onclick="expandSidebarSub('electrical')">Electrical Engineering</button></li>
+                        <li><button class="c-sidebar__btn c-sidebar__btn--color-3" onclick="expandSidebarSub('javascript')">JavaScript</button></li>
+                        <li><button class="c-sidebar__btn c-sidebar__btn--color-4" onclick="expandSidebarSub('math')">Mathematics</button></li>
+                        <li><button class="c-sidebar__btn c-sidebar__btn--color-5" onclick="expandSidebarSub('python')">Python</button></li>
+                        <li><button class="c-sidebar__btn c-sidebar__btn--color-6" onclick="expandSidebarSub('html')">HTML</button></li>
+                        <li><button class="c-sidebar__btn c-sidebar__btn--color-7" onclick="expandSidebarSub('css')">CSS</button></li>
+
+                    </ul>
+
+                </nav>
+
+            </div>
+
+        </aside>
+
+        <!-- Sidebar: Right Under Panel -->
+        <aside id="sidebar-sub" class="c-sidebar-sub c-glass">
+
+            <div class="c-sidebar__sub-content">
+
+                <div class="c-sidebar__sub-content-inner">
+                    <h4 id="sidebar-sub-title">Theme</h4>
+                    <ul id="sidebar-sub-list">
+                        <!-- Dynamic via JS -->
+                    </ul>
+                </div>
+
+            </div>
+
+        </aside>
+
+        <!-- Sidebar: Overlay -->
+        <div class="c-sidebar-overlay" onclick="closeSidebarCompletely()"></div>
+
         <!-- Main -->
-        <main>
-            <!-- Section - Home -->
-            <!-- Section: Page - Home -->
-            <section id="home" class="landing-page">
-                <div class="landing-page-content">
-                    <h1 class="h1-home">"Hi, I'm Lulzim Morina and this is why.."</h1>
-                    <p>
-                        "..I do not want to just find a Job, I want to walk the path of proficiency within
-                        the field of Computer Science."
-                    </p>
-                    <div class="landing-page-actions">
-                        <button class="">Read More</button>
-                    </div>
+        <main class="l-main">
+
+            <!-- Section: Page - Landing Page -->
+            <section id="landing-page" class="l-main__section l-main__section--hero">
+                
+                <img alt="Landing Page Image" class="c-bg-cover c-bg-cover--landing">
+                
+                <div class="c-hero-content">
+                    <h1 class="c-hero-title">Path to Proficiency</h1>
+                    <p class="c-hero-subtitle">Building the Inner Citadel. <span>Mastering Mind and Code.</span></p>
+                    <a href="#my-vision" class="c-hero-btn">Enter the Path</a>
                 </div>
-                <div class="landing-page-image">
-                    <div class="image-container">
-                        <img src="assets/img/lulzim_morina_3.jpeg" alt="This is me, Lulzim Morina.">
-                        <button class="about-me-circle-button-landing-page">Who am I?</button>
-                    </div>
-                </div>
+
             </section>
-            <!-- Section - About Me -->
-            <section id="about-me" class="about-me-page">
-                <div class="about-me-page-heading">
-            <!-- Section: Page - About Me -->
-                    <h1>Who is Lulzim Morina?</h1>
-                </div>
-                <div class="about-me-page-textbox">
-                    <p>In the 'About Me' section I want to introduce myself and share my past, present and future goals.</p>
-                </div>
-                <div class="about-me-page-profile-picture">
-                    <img src="assets/img/lulzim_morina_2.jpg" alt="This is me, Lulzim Morina.">
+
             <!-- Section: Page - My Vision -->
+            <section id="my-vision" class="l-main__section">
+
+                <div class="l-main__container">
                     <h1>My Vision</h1>
+                    <h3>The Path to Proficiency: Finishing what I start.</h3>
+                    <p>
+                        "I’ll be honest: Claiming that I always finish what I begin would be the biggest lie I’ve ever told. Like many of us, I’ve left trails of half-finished ideas behind me. But that stops here. <br>                            This website is my commitment to change. It’s built on the belief that everything starts with a single step, followed by another, and another. I’ve come to realize that in the pursuit of mastery, you never truly 'arrive'. The journey itself is the destination. It’s about <em>how</em> you walk the path. <br><br>
+                        <strong>This is my Path to Proficiency.</strong> <br><br>
+                        My goal is simple: to take the small skills I possess, refine them, and master them. I’m doing this to prove to the most important person in my life that I can see things through: <br><br>
+                        <strong>To prove it to myself!</strong>"
+                    </p>
                 </div>
+
             </section>
-            <!-- Section - My Vision -->
-            <section id="my-vision" class="my-vision-page">
-                <p>Here I will share my vision for the future and the goals I want to achieve.</p>
+
+            <!-- Section: Page - About Me -->
+            <section id="about-me" class="l-main__section">
+
+                <div class="l-main__container l-main__container--max-width">
+
+                    <h1>About Me</h1>
+                    <h3>20 Years of Mats, 0 Miles of Moving, and One New Path.</h3>
+                    <p>
+                        "For nearly two decades, my world was defined by the dimensions of a Karate dojo. If there is one thing martial arts taught me, it’s that mastery isn't about the black belt—it's about showing up for the thousandth basic punch when no one is watching. <br><br>
+                        I’ve spent my life in the same place, but my mind has been everywhere. I’ve started degrees, explored different industries, and 'sniffed' into various careers. For a long time, I felt like I was just collecting unfinished chapters. <br><br>
+                        <strong>But now, I’m changing the narrative.</strong> <br><br>
+                        I’ve traded the Gi for a keyboard. HTML and CSS are my new 'Katas.' I’m building this site not just to learn code, but to prove that I can take all those scattered experiences and channel them into one finished product. <br><br>
+                        I might call myself a 'birdbrain' when JavaScript gets tough, but if I can stand on a mat for 20 years, I can certainly figure out a 'div'. I'm not just looking for a job; I'm looking for the place where my persistence finally meets its purpose."
+                    </p>
+                    <a href="#" class="">Who is Lulzim Morina?</a>
+
+                </div>
+
+            </section>
+
             <!-- Section: Page - Path to Proficiency -->
-                    <h1>Path to Proficiency</h1>
+            <section id="path-to-proficiency" class="l-main__section">
+
+                <div class="l-main__container">
+
+                    <h1>Path to Proficiency (P2P)</h1>
+                    <p>
+                        In this section, I will outline the steps I am taking to become proficient in all the 
+                        skills I need to achieve my vision and goals. This will include the resources I am using,
+                        the projects I am working on, and the milestones I am aiming for.
+                    </p>
+
+                </div>
+
+                <div class="l-main__container u-grid-12">
+
+                    <div class="u-col-12">
+
+                        <h2>My Journey</h2>
+                        <p>This is where I will share the story of my journey towards proficiency.</p>
+
+                    </div>
+
+                    <!-- Navigation - (carousel.css) -->
+                    <div class="c-book-carousel u-col-12">
+
+                        <!-- 1. HTML -->
+                        <div class="c-book-item c-book-item--color-1" data-link="path-to-proficiency/web-development/html/index.html">
+                            
+                            <div class="c-book-item__header">
+                                <span class="c-book-item__subject">HTML</span>
+                                <span class="c-book-item__number">1</span>
+                            </div>
+                            
+                            <div class="c-book-item__content">
+                                <h4>Last Update</h4>
+                                <p>Tags & Struktur gelernt</p>
+                            </div>
+
+                        </div>
+
+                        <!-- 2. CSS -->
+                        <div class="c-book-item c-book-item--color-2" data-link="path-to-proficiency/web-development/css/index.html">
+                            
+                            <div class="c-book-item__header">
+                                <span class="c-book-item__subject">CSS</span>
+                                <span class="c-book-item__number">2</span>
+                            </div>
+                            
+                            <div class="c-book-item__content">
+                                <h4>Last Update</h4>
+                                <p>3D-Bühne steht!</p>
+                            </div>
+
+                        </div>
+
+                        <!-- 3. JavaScript -->
+                        <div class="c-book-item c-book-item--color-3" data-link="path-to-proficiency/java-script/index.html">
+
+                            <div class="c-book-item__header">
+                                <span class="c-book-item__subject">JavaScript</span>
+                                <span class="c-book-item__number">3</span>
+                            </div>
+                            
+                            <div class="c-book-item__content">
+                                <h4>Last Update</h4>
+                                <p>Fließband-Logik läuft</p>
+                            </div>
+
+                        </div>
+
+                        <!-- 4. Git -->
+                        <div class="c-book-item c-book-item--color-4" data-link="path-to-proficiency/git/index.html">
+
+                            <div class="c-book-item__header">
+                                <span class="c-book-item__subject">GIT</span>
+                                <span class="c-book-item__number">4</span>
+                            </div>
+                            
+                            <div class="c-book-item__content">
+                                <h4>Last Update</h4>
+                                <p>Repo eingerichtet</p>
+                            </div>
+
+                        </div>
+
+                        <!-- 5. Python -->
+                        <div class="c-book-item c-book-item--color-5" data-link="path-to-proficiency/python/index.html">
+
+                            <div class="c-book-item__header">
+                                <span class="c-book-item__subject">PYTHON</span>
+                                <span class="c-book-item__number">5</span>
+                            </div>
+                            
+                            <div class="c-book-item__content">
+                                <h4>Last Update</h4>
+                                <p>Loops & Lists</p>
+                            </div>
+
+                        </div>
+
+                        <!-- 6. SQL -->
+                        <div class="c-book-item c-book-item--color-6" data-link="path-to-proficiency/sql/index.html">
+
+                            <div class="c-book-item__header">
+                                <span class="c-book-item__subject">SQL</span>
+                                <span class="c-book-item__number">6</span>
+                            </div>
+                            
+                            <div class="c-book-item__content">
+                                <h4>Last Update</h4>
+                                <p>Tabellen strukturiert</p>
+                            </div>
+
+                        </div>
+                        
+                        <!-- 7. C -->
+                        <div class="c-book-item c-book-item--color-7" data-link="path-to-proficiency/c/index.html">
+
+                            <div class="c-book-item__header">
+                                <span class="c-book-item__subject">C</span>
+                                <span class="c-book-item__number">7</span>
+                            </div>
+                            
+                            <div class="c-book-item__content">
+                                <h4>Last Update</h4>
+                                <p>Pointer & Speicher</p>
+                            </div>
+
+                        </div>
+
+                        <!-- 8. C++ -->
+                        <div class="c-book-item c-book-item--color-8" data-link="path-to-proficiency/c-plus-plus/index.html">
+
+                            <div class="c-book-item__header">
+                                <span class="c-book-item__subject">C++</span>
+                                <span class="c-book-item__number">8</span>
+                            </div>
+                            
+                            <div class="c-book-item__content">
+                                <h4>Last Update</h4>
+                                <p>Klassen & OOP</p>
+                            </div>
+
+                        </div>
+
+                        <!-- 9. Electrical Engineering -->
+                        <div class="c-book-item c-book-item--color-9" data-link="path-to-proficiency/electrical-engineering/index.html">
+
+                            <div class="c-book-item__header">
+                                <span class="c-book-item__subject">EE</span>
+                                <span class="c-book-item__number">9</span>
+                            </div>
+                            
+                            <div class="c-book-item__content">
+                                <h4>Last Update</h4>
+                                <p>Schaltkreise & Ohmsches Gesetz</p>
+                            </div>
+
+                        </div>
+
+                        <!-- 10. Mathematics -->
+                        <div class="c-book-item c-book-item--color-10" data-link="path-to-proficiency/mathematics/index.html">
+
+                            <div class="c-book-item__header">
+                                <span class="c-book-item__subject">Mathematics</span>
+                                <span class="c-book-item__number">10</span>
+                            </div>
+                            
+                            <div class="c-book-item__content">
+                                <h4>Last Update</h4>
+                                <h4>Matrizen & Vektoren</h4>
+                                <p>Matrizen & Vektoren</p>
+                            </div>
+
+                        </div>
+
+                        <!-- 11. Test-Subject -->
+                        <div class="c-book-item c-book-item--color-11" data-link="index.html">
+
+                            <div class="c-book-item__header">
+                                <span class="c-book-item__subject">Kfz</span>
+                                <span class="c-book-item__number">11</span>
+                            </div>
+                            
+                            <div class="c-book-item__content">
+                                <h4>Last Update</h4>
+                                <h4>Subject</h4>
+                                <p>This is a test.. lol.</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
             </section>
-            <!-- Section - Path to Proficiency -->
-            <section id="path-to-proficiency" class="path-to-proficiency-page">
-                <p>
-                    In this section, I will outline the steps I am taking to become proficient in all the 
-                    skills I need to achieve my vision and goals. This will include the resources I am using,
-                    the projects I am working on, and the milestones I am aiming for.
-                </p>
-            <!-- Section: Page - Ranks -->
-            </section>
+
         </main>
+
         <!-- Footer -->
-        <footer>
-            <p>&copy; 2026 Lulzim Morina. All rights reserved.</p>
+        <footer class="l-footer">
+
+            <div class="l-footer__inner">
+
+                <div class="l-footer__copyright">
+                    <p>&copy; 2026 Lulzim Morina. All rights reserved.</p>
+                </div>
+                
+                <div class="footer__socials">
+                    <h3>Footer Socials</h3>
+                    <p>This is where the socials for the footer find its place.</p>
+                </div>
+
+            </div>
+
         </footer>
-        <!-- Back to Top Button -->
-        <button id="backToTop" class="btn-to-top">
-            <span class="tooltip">Nach oben!</span>
-            <img src="assets/img/logo.png" alt="My Logo" class="btn-icon">
+
+        <!-- Button to Top -->
+        <button id="backToTop" class="btn-to-top c-glass">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-big-up-icon lucide-arrow-big-up"><path d="M9 19a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-6a1 1 0 0 1 1-1h3.293a.707.707 0 0 0 .5-1.207l-7.086-7.086a1 1 0 0 0-1.414 0l-7.086 7.086a.707.707 0 0 0 .5 1.207H8a1 1 0 0 1 1 1z"/></svg>
+
         </button>
+
         <!-- Scripts -->
         <script src="assets/js/script.js"></script>
+
     </body>
+
 </html>
